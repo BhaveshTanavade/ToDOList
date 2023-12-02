@@ -1,64 +1,20 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: lightblue;
-    margin: 10px;
-    display: flex;
-    height: 100vh;
-/* to keep the box in the center of the window all time  */
-    justify-content: center;
-    align-items: center;
-    
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Todo List</title>
+  
+</head>
+<body>
 
-#todo-container {
-    width: 50%;
-    max-width: 500px;
-    min-width: 300px;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
-    border-radius: 8px;
-    text-align: center;
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-
-/*text color of the button and background*/
-button {
-    background-color: cadetblue;
-    color: #fff;
-}
-
-.task {
-    background-color: #eee;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    
-}
-
-.task:hover {
-    background-color: lightblue;
-    transition: background-color 0.3s;
-}
-
-.task input[type="checkbox"] {
-    margin-right: 8px;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: darkgrey;
-}
-
-#task-count {
-    margin-top: 10px;
-    color: #777;
-
+  <div id="todo-container">
+    <input type="text" id="taskInput" placeholder="Please enter tasks to add">
+    <button onclick="addTask()">Add Task</button>
+    <div id="tasks"></div>
+    <div id="task-count">Tasks to do: 0</div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
